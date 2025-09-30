@@ -1,6 +1,7 @@
 {
   "extends": "./jsconfig.json",
   "compilerOptions": {
+    "outDir": "./build",
     "allowJs": true,
     "checkJs": false
   }
