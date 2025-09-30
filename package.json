@@ -4,8 +4,8 @@
   "private": true,
   "description": "A Strapi application",
   "scripts": {
-    "build": "strapi build && npm run copy:data",
-    "copy:data": "mkdir -p build && cp -r data build/ 2>/dev/null || true",
+    "build": "strapi build && npm run copy:files",
+    "copy:files": "mkdir -p build && cp -r data build/ && cp -r config build/ 2>/dev/null || true",
     "deploy": "strapi deploy",
     "develop": "strapi develop",
     "seed:example": "node ./scripts/seed.js",
