@@ -14,16 +14,29 @@
   "attributes": {
     "name": {
       "type": "string",
-      "required": true,
-      "maxLength": 255
+      "maxLength": 255,
+      "required": true
     },
     "category": {
       "type": "enumeration",
+      "required": true,
       "enum": [
-        "Casas Coloniales",
-        "Departamentos"
-      ],
-      "required": true
+        "Loft",
+        "Habitación",
+        "Depa",
+        "Casa"
+      ]
+    },
+    "propiedad": {
+      "type": "enumeration",
+      "enum": [
+        "Ilustre",
+        "Margot",
+        "Araiza",
+        "Alhaja",
+        "Zentra",
+        "Nueve Esquinas"
+      ]
     },
     "guests": {
       "type": "integer",
@@ -31,29 +44,36 @@
       "min": 1,
       "max": 20
     },
-    "location": {
-      "type": "string",
-      "required": true,
-      "maxLength": 100
-    },
-    "price": {
-      "type": "decimal",
-      "required": true,
-      "min": 0
-    },
     "image": {
       "type": "media",
       "multiple": false,
       "required": true,
-      "allowedTypes": ["images"]
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "ubicacion": {
+      "type": "enumeration",
+      "enum": [
+        "Centro",
+        "Expo",
+        "Andares"
+      ]
+    },
+    "huespedes": {
+      "type": "integer"
+    },
+    "camas": {
+      "type": "integer"
     },
     "detailsUrl": {
       "type": "string",
       "required": false
     },
-    "featured": {
-      "type": "boolean",
-      "default": false
+    "price": {
+      "type": "decimal",
+      "required": true,
+      "min": 0
     },
     "order": {
       "type": "integer",
