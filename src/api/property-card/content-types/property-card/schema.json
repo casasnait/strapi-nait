@@ -17,7 +17,7 @@
       "maxLength": 255,
       "required": true
     },
-    "category": {
+    "tipo": {
       "type": "enumeration",
       "required": true,
       "enum": [
@@ -38,12 +38,6 @@
         "Nueve Esquinas"
       ]
     },
-    "guests": {
-      "type": "integer",
-      "required": true,
-      "min": 1,
-      "max": 20
-    },
     "image": {
       "type": "media",
       "multiple": false,
@@ -60,10 +54,10 @@
         "Andares"
       ]
     },
-    "huespedes": {
-      "type": "integer"
-    },
     "camas": {
+      "type": "string"
+    },
+    "huespedes": {
       "type": "integer"
     },
     "detailsUrl": {
@@ -74,10 +68,6 @@
       "type": "decimal",
       "required": true,
       "min": 0
-    },
-    "order": {
-      "type": "integer",
-      "default": 0
     }
   }
 }

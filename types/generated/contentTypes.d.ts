@@ -386,24 +386,11 @@ export interface ApiPropertyCardPropertyCard
     draftAndPublish: true;
   };
   attributes: {
-    camas: Schema.Attribute.Integer;
-    category: Schema.Attribute.Enumeration<
-      ['Loft', 'Habitaci\u00F3n', 'Depa', 'Casa']
-    > &
-      Schema.Attribute.Required;
+    camas: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     detailsUrl: Schema.Attribute.String;
-    guests: Schema.Attribute.Integer &
-      Schema.Attribute.Required &
-      Schema.Attribute.SetMinMax<
-        {
-          max: 20;
-          min: 1;
-        },
-        number
-      >;
     huespedes: Schema.Attribute.Integer;
     image: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
@@ -417,7 +404,6 @@ export interface ApiPropertyCardPropertyCard
       Schema.Attribute.SetMinMaxLength<{
         maxLength: 255;
       }>;
-    order: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<0>;
     price: Schema.Attribute.Decimal &
       Schema.Attribute.Required &
       Schema.Attribute.SetMinMax<
@@ -430,6 +416,10 @@ export interface ApiPropertyCardPropertyCard
       ['Ilustre', 'Margot', 'Araiza', 'Alhaja', 'Zentra', 'Nueve Esquinas']
     >;
     publishedAt: Schema.Attribute.DateTime;
+    tipo: Schema.Attribute.Enumeration<
+      ['Loft', 'Habitaci\u00F3n', 'Depa', 'Casa']
+    > &
+      Schema.Attribute.Required;
     ubicacion: Schema.Attribute.Enumeration<['Centro', 'Expo', 'Andares']>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
