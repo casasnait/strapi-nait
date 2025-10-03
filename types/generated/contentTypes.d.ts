@@ -390,6 +390,7 @@ export interface ApiPropertyCardPropertyCard
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    descripcion: Schema.Attribute.String;
     detailsUrl: Schema.Attribute.String;
     huespedes: Schema.Attribute.Integer;
     image: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;

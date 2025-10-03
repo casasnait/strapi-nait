@@ -8,6 +8,10 @@
     "copy:files": "mkdir -p build && cp -r data build/ && cp -r config build/ 2>/dev/null || true",
     "deploy": "strapi deploy",
     "develop": "strapi develop",
+    "dev:local": "cp .env.local .env && strapi develop",
+    "dev:prod": "cp .env.production .env && NODE_ENV=production strapi start",
+    "start:local": "cp .env.local .env && strapi start",
+    "start:prod": "cp .env.production .env && NODE_ENV=production strapi start",
     "seed:example": "node ./scripts/seed.js",
     "start": "strapi start",
     "strapi": "strapi"
