@@ -448,7 +448,7 @@ export interface ApiTourCardTourCard extends Struct.CollectionTypeSchema {
       'images' | 'files' | 'videos' | 'audios',
       true
     >;
-    incluye: Schema.Attribute.String;
+    incluye: Schema.Attribute.Text;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -456,8 +456,8 @@ export interface ApiTourCardTourCard extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.Private;
     name: Schema.Attribute.String;
-    no_incluye: Schema.Attribute.String;
-    price: Schema.Attribute.String;
+    no_incluye: Schema.Attribute.Text;
+    price: Schema.Attribute.Text;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &

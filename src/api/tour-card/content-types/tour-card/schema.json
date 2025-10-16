@@ -31,13 +31,13 @@
       "type": "string"
     },
     "price": {
-      "type": "string"
+      "type": "text"
     },
     "incluye": {
-      "type": "string"
+      "type": "text"
     },
     "no_incluye": {
-      "type": "string"
+      "type": "text"
     }
   }
 }
