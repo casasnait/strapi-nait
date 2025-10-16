@@ -26,6 +26,18 @@
     },
     "description": {
       "type": "string"
+    },
+    "disponibilidad": {
+      "type": "string"
+    },
+    "price": {
+      "type": "string"
+    },
+    "incluye": {
+      "type": "string"
+    },
+    "no_incluye": {
+      "type": "string"
     }
   }
 }
