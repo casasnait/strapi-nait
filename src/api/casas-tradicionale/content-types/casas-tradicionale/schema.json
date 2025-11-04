@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "casas_tradicionales",
+  "info": {
+    "singularName": "casas-tradicionale",
+    "pluralName": "casas-tradicionales",
+    "displayName": "Casas tradicionale"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Titulo": {
+      "type": "string"
+    },
+    "Imagenes": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "URL": {
+      "type": "string"
+    }
+  }
+}

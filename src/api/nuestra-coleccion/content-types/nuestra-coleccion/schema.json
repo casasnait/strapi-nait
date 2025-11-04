@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "nuestra_coleccions",
+  "info": {
+    "singularName": "nuestra-coleccion",
+    "pluralName": "nuestra-coleccions",
+    "displayName": "Nuestra Coleccion"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre": {
+      "type": "string"
+    },
+    "imagen": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}

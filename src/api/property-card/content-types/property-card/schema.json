@@ -14,7 +14,7 @@
   "attributes": {
     "image": {
       "type": "media",
-      "multiple": false,
+      "multiple": true,
       "required": true,
       "allowedTypes": [
         "images"
@@ -63,14 +63,14 @@
     "huespedes": {
       "type": "integer"
     },
-    "detailsUrl": {
-      "type": "string",
-      "required": false
-    },
     "price": {
       "type": "decimal",
       "required": true,
       "min": 0
+    },
+    "detailsUrl": {
+      "type": "string",
+      "required": false
     }
   }
 }

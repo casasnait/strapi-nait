@@ -373,6 +373,107 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiCasasTradicionaleCasasTradicionale
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'casas_tradicionales';
+  info: {
+    displayName: 'Casas tradicionale';
+    pluralName: 'casas-tradicionales';
+    singularName: 'casas-tradicionale';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    Imagenes: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::casas-tradicionale.casas-tradicionale'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    Titulo: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    URL: Schema.Attribute.String;
+  };
+}
+
+export interface ApiDepasModernoDepasModerno
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'depas_modernos';
+  info: {
+    displayName: 'Depas Moderno';
+    pluralName: 'depas-modernos';
+    singularName: 'depas-moderno';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    Imagenes: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::depas-moderno.depas-moderno'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    Titulo: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    URL: Schema.Attribute.String;
+  };
+}
+
+export interface ApiNuestraColeccionNuestraColeccion
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'nuestra_coleccions';
+  info: {
+    displayName: 'Nuestra Coleccion';
+    pluralName: 'nuestra-coleccions';
+    singularName: 'nuestra-coleccion';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    imagen: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::nuestra-coleccion.nuestra-coleccion'
+    > &
+      Schema.Attribute.Private;
+    nombre: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiPropertyCardPropertyCard
   extends Struct.CollectionTypeSchema {
   collectionName: 'property_cards';
@@ -393,7 +494,7 @@ export interface ApiPropertyCardPropertyCard
     descripcion: Schema.Attribute.String;
     detailsUrl: Schema.Attribute.String;
     huespedes: Schema.Attribute.Integer;
-    image: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    image: Schema.Attribute.Media<'images', true> & Schema.Attribute.Required;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -974,6 +1075,9 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
+      'api::casas-tradicionale.casas-tradicionale': ApiCasasTradicionaleCasasTradicionale;
+      'api::depas-moderno.depas-moderno': ApiDepasModernoDepasModerno;
+      'api::nuestra-coleccion.nuestra-coleccion': ApiNuestraColeccionNuestraColeccion;
       'api::property-card.property-card': ApiPropertyCardPropertyCard;
       'api::tour-card.tour-card': ApiTourCardTourCard;
       'plugin::content-releases.release': PluginContentReleasesRelease;
