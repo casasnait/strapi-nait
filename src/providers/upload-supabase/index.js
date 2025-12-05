@@ -14,7 +14,7 @@ const streamToBuffer = (stream) => {
   });
 };
 
-// Sanitizar nombre de archivo para Supabase Storage
+// Sanitize file name for Supabase Storage
 const sanitizeFileName = (name) => {
   if (!name) return name;
   return name
