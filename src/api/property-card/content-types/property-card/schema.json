@@ -31,19 +31,19 @@
       "enum": [
         "Loft",
         "Habitación",
-        "Depa",
+        "Departamento",
         "Casa"
       ]
     },
     "propiedad": {
       "type": "enumeration",
       "enum": [
-        "Ilustre",
+        "Casa Ilustre",
         "Margot",
-        "Araiza",
-        "Alhaja",
-        "Zentra",
-        "Nueve Esquinas"
+        "Casa Araiza",
+        "Casa Alhaja",
+        "Zentral",
+        "Casa 9 Esquinas"
       ]
     },
     "descripcion": {
@@ -52,16 +52,16 @@
     "ubicacion": {
       "type": "enumeration",
       "enum": [
-        "Centro",
-        "Expo",
-        "Andares",
         "Centro histórico",
         "Tlaquepaque",
+        "Centro",
         "Providencia",
         "Colonia Americana",
         "Vallarta",
+        "Andares",
         "San Juan de Dios",
-        "Minerva"
+        "Minerva",
+        "Expo"
       ]
     },
     "camas": {

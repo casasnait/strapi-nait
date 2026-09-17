@@ -515,25 +515,32 @@ export interface ApiPropertyCardPropertyCard
         number
       >;
     propiedad: Schema.Attribute.Enumeration<
-      ['Ilustre', 'Margot', 'Araiza', 'Alhaja', 'Zentra', 'Nueve Esquinas']
+      [
+        'Casa Ilustre',
+        'Margot',
+        'Casa Araiza',
+        'Casa Alhaja',
+        'Zentral',
+        'Casa 9 Esquinas',
+      ]
     >;
     publishedAt: Schema.Attribute.DateTime;
     tipo: Schema.Attribute.Enumeration<
-      ['Loft', 'Habitaci\u00F3n', 'Depa', 'Casa']
+      ['Loft', 'Habitaci\u00F3n', 'Departamento', 'Casa']
     > &
       Schema.Attribute.Required;
     ubicacion: Schema.Attribute.Enumeration<
       [
-        'Centro',
-        'Expo',
-        'Andares',
         'Centro hist\u00F3rico',
         'Tlaquepaque',
+        'Centro',
         'Providencia',
         'Colonia Americana',
         'Vallarta',
+        'Andares',
         'San Juan de Dios',
         'Minerva',
+        'Expo',
       ]
     >;
     updatedAt: Schema.Attribute.DateTime;
