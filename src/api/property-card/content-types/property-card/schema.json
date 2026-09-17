@@ -54,7 +54,14 @@
       "enum": [
         "Centro",
         "Expo",
-        "Andares"
+        "Andares",
+        "Centro histórico",
+        "Tlaquepaque",
+        "Providencia",
+        "Colonia Americana",
+        "Vallarta",
+        "San Juan de Dios",
+        "Minerva"
       ]
     },
     "camas": {

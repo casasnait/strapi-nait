@@ -522,7 +522,20 @@ export interface ApiPropertyCardPropertyCard
       ['Loft', 'Habitaci\u00F3n', 'Depa', 'Casa']
     > &
       Schema.Attribute.Required;
-    ubicacion: Schema.Attribute.Enumeration<['Centro', 'Expo', 'Andares']>;
+    ubicacion: Schema.Attribute.Enumeration<
+      [
+        'Centro',
+        'Expo',
+        'Andares',
+        'Centro hist\u00F3rico',
+        'Tlaquepaque',
+        'Providencia',
+        'Colonia Americana',
+        'Vallarta',
+        'San Juan de Dios',
+        'Minerva',
+      ]
+    >;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
